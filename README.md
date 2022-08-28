@@ -1,2 +1,2 @@
 # hackathonproject
-salary calc
+salary calc pro
