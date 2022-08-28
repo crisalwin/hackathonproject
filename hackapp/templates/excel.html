@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<html>
+<head>
+    <title>
+        Excel file upload and processing : Django Example : ThePythonDjango.Com
+    </title>
+</head>
+<body style="text-align:center">
+<form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+
+    <input type="file"
+           title="Upload excel file"
+           name="excel_file"
+           style="border: 2px solid black; padding: 5px;"
+           required="required">
+    <p>
+        <input type="submit"
+               value="Upload"
+               style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+
+        <a href="#">more</a>
+</form>
+
+</p>
+<hr>
+<h1><u>The uploaded results</u></h1>
+{% for row in excel_data %}
+{% for cell in row %}
+{{ cell }}&nbsp;&nbsp;
+{% endfor %}
+<br><br>
+{% endfor %}
+
+{% for kgf in mlist %}<br>
+
+{{ kgf }}&nbsp;&nbsp;
+{% endfor %}
+<br>
+</body>
+</html>
+</body>
+</html>
